@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using StatusNamespace;
 
 namespace Student.Tests
 {
@@ -11,11 +12,11 @@ namespace Student.Tests
             //var student = new Student(123456, "Sanne", "Hansen", "Active", new DateTime(2020, 08, 30), new DateTime(2023, 06, 30), new DateTime(2023, 06, 30));
             var student = new Student
             {
-                Id = 12345,
+                Id = 123456,
                 GivenName = "Sanne",
                 Surname = "Hansen",
                 status = Status.Active,
-                StartDate = new DateTime(2020, 08, 30),
+                StartDate = new DateTime(2020, 08, 30), //datetime formatting
                 EndDate = new DateTime(2023, 06, 30),
                 Graduation = new DateTime(2023, 06, 30)
             };
