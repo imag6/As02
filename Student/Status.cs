@@ -5,6 +5,6 @@ namespace StatusNamespace
             New, 
             Active, 
             Droupout, 
-            Gratuated
+            Graduated
         }
 }
