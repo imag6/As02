@@ -1,3 +1,4 @@
+using System.Reflection;
 using System;
 using Xunit;
 using StatusNamespace;
@@ -109,6 +110,27 @@ namespace Student.Tests
 
             output = student1 == student2;
             Assert.False(output);
+        }
+
+        [Fact]
+        public void recordToStringPrintsFields() 
+        {
+            var student = new ImmutableStudent
+            {
+                Id = 123456,
+                GivenName = "Hanne",
+                Surname = "Sørensen",
+                status = Status.Active,
+                StartDate = new DateTime(2021, 08, 30), 
+                EndDate = new DateTime(2024, 06, 30),
+                Graduation = new DateTime(2024, 06, 15)
+            };
+
+            var expected = "ImmutableStudent { Id = 123456, GivenName = Hanne, Surname = Sørensen, status = Active, StartDate = 30.08.2021 00.00.00, EndDate = 30.06.2024 00.00.00, Graduation = 15.06.2024 00.00.00 }";
+
+            var output = student.ToString();
+
+            Assert.Equal(expected,output);
         }
     }
 }
