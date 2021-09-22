@@ -9,18 +9,17 @@ namespace Student
         {
             get; init;
         }
-        public string GivenName;
-        public string Surname;
+        public string GivenName {get; set;}
+        public string Surname {get; set;}
         public Status status {get; init;} //readonly
         
-        public DateTime StartDate; 
-        public DateTime EndDate; 
-        public DateTime Graduation;
+        public DateTime StartDate {get; set;}
+        public DateTime EndDate {get; set;}
+        public DateTime Graduation{get; set;}
 
         public override string ToString()
         {
             return GivenName + " " + Surname + " (" + Id + "): " + status + " [Enrolled: " + StartDate.ToString("dd.MM.yyyy") + ", Enddate: " + EndDate.ToString("dd.MM.yyyy") + ", Expected Graduation: " + Graduation.ToString("dd.MM.yyyy") + "]";
         }
-
     }
 }

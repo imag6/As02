@@ -6,7 +6,91 @@ using StatusNamespace;
 namespace Student.Tests
 {
     public class StudentTest
-    {
+    {   [Fact]
+        public void getName()
+        {
+            var student = new Student
+            {
+                Id = 123456,
+                GivenName = "Sanne",
+                Surname = "Hansen",
+                status = Status.Active,
+                StartDate = new DateTime(2020, 08, 30), 
+                EndDate = new DateTime(2023, 06, 30),
+                Graduation = new DateTime(2023, 06, 15)
+            };
+                
+            var output = student.GivenName;
+
+            var expected = "Sanne";
+           
+            Assert.Equal(expected, output);
+        }
+
+        [Fact]
+        public void getSurname()
+        {
+            var student = new Student
+            {
+                Id = 123456,
+                GivenName = "Sanne",
+                Surname = "Hansen",
+                status = Status.Active,
+                StartDate = new DateTime(2020, 08, 30), 
+                EndDate = new DateTime(2023, 06, 30),
+                Graduation = new DateTime(2023, 06, 15)
+            };
+                
+            var output = student.Surname;
+
+            var expected = "Hansen";
+           
+            Assert.Equal(expected, output);
+        }
+        [Fact]
+        public void setGivenName()
+        {
+            var student = new Student
+            {
+                Id = 123456,
+                GivenName = "Sanne",
+                Surname = "Hansen",
+                status = Status.Active,
+                StartDate = new DateTime(2020, 08, 30), 
+                EndDate = new DateTime(2023, 06, 30),
+                Graduation = new DateTime(2023, 06, 15)
+            };
+            student.GivenName = "Susanne";
+            
+            var output = student.GivenName;
+
+            var expected = "Susanne";
+           
+            Assert.Equal(expected, output);
+        }
+
+        [Fact]
+        public void setSurname()
+        {
+            var student = new Student
+            {
+                Id = 123456,
+                GivenName = "Sanne",
+                Surname = "Hansen",
+                status = Status.Active,
+                StartDate = new DateTime(2020, 08, 30), 
+                EndDate = new DateTime(2023, 06, 30),
+                Graduation = new DateTime(2023, 06, 15)
+            };
+            student.Surname = "Nielsen";
+            
+            var output = student.Surname;
+
+            var expected = "Nielsen";
+           
+            Assert.Equal(expected, output);
+        }
+
         [Fact]
         public void printingOutCorrectString()
         {
