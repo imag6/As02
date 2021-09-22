@@ -23,7 +23,7 @@ namespace Student.Tests
                 
             var output = student.ToString(); 
 
-            var expected = "Sanne Hansen (123456): Active [Enrolled: 30.08.2020, Enddate: 30.06.2023, Expected Graduation: 15.06.2023]";
+            var expected = "Sanne Hansen (123456): Active [Enrolled: 08/30/2020, Enddate: 06/30/2023, Expected Graduation: 06/15/2023]";
            
             Assert.Equal(expected, output);
         }
@@ -44,7 +44,7 @@ namespace Student.Tests
                 
             var output = student.ToString(); 
 
-            var expected = "Hanne Jensen (123456): Graduated [Enrolled: 30.08.2017, Enddate: 30.06.2020, Expected Graduation: 15.06.2020]";
+            var expected = "Hanne Jensen (123456): Graduated [Enrolled: 08/30/2017, Enddate: 06/30/2020, Expected Graduation: 06/15/2020]";
            
             Assert.Equal(expected, output);
         }
@@ -126,7 +126,7 @@ namespace Student.Tests
                 Graduation = new DateTime(2024, 06, 15)
             };
 
-            var expected = "ImmutableStudent { Id = 123456, GivenName = Hanne, Surname = Sørensen, status = Active, StartDate = 30.08.2021 00.00.00, EndDate = 30.06.2024 00.00.00, Graduation = 15.06.2024 00.00.00 }";
+            var expected = "ImmutableStudent { Id = 123456, GivenName = Hanne, Surname = Sørensen, status = Active, StartDate = 08/30/2021 00.00.00, EndDate = 06/30/2024 00.00.00, Graduation = 06/152024 00.00.00 }";
 
             var output = student.ToString();
 
