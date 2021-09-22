@@ -1,34 +1,25 @@
 ﻿using System;
+using StatusNamespace;
 
 namespace Student
 {
     public class Student
     {
-        int Id;
-        string GivenName;
-        string Surname;
-        readonly Status status;
-        
-        DateTime StartDate; //DD.MM.YY
-        DateTime EndDate; 
-        DateTime Graduation;
-
-        public override string ToString()
-        {
-            return GivenName + " " + Surname + " (" + id + "): " + status + " [Enrolled: " + StartDate + ", Enddate: " + EndDate + ", Expected Graduation: " + Graduation + "]";
-        }
-
-         public int id
+        public int Id
         {
             get; init;
         }
+        public string GivenName {get; set;}
+        public string Surname {get; set;}
+        public Status status {get; init;} //readonly
         
-        public enum Status
+        public DateTime StartDate {get; set;}
+        public DateTime EndDate {get; set;}
+        public DateTime Graduation{get; set;}
+
+        public override string ToString()
         {
-            New, 
-            Active, 
-            Droupout, 
-            Gratuated
+            return GivenName + " " + Surname + " (" + Id + "): " + status + " [Enrolled: " + StartDate.ToString("MM/dd/yyyy") + ", Enddate: " + EndDate.ToString("MM/dd/yyyy") + ", Expected Graduation: " + Graduation.ToString("MM/dd/yyyy") + "]";
         }
     }
 }
