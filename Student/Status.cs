@@ -2,9 +2,10 @@ namespace StatusNamespace
 {
     public enum Status
         {
+            None,
             New, 
             Active, 
-            Droupout, 
+            Dropout, 
             Graduated
         }
 }
