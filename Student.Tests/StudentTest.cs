@@ -126,7 +126,7 @@ namespace Student.Tests
                 Graduation = new DateTime(2024, 06, 15)
             };
 
-            var expected = "ImmutableStudent { Id = 123456, GivenName = Hanne, Surname = Sørensen, status = Active, StartDate = 08/30/2021 00:00:00, EndDate = 06/30/2024 00:00:00, Graduation = 06/152024 00:00:00 }";
+            var expected = "ImmutableStudent { Id = 123456, GivenName = Hanne, Surname = Sørensen, status = Active, StartDate = 08/30/2021 00:00:00, EndDate = 06/30/2024 00:00:00, Graduation = 06/15/2024 00:00:00 }";
 
             var output = student.ToString();
 
